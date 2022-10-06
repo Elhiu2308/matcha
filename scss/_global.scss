@@ -1,0 +1,25 @@
+
+/** colores */
+$dark-green-title: #025157;
+$dark-green-text: #135359;
+$color-base-card:#4A4A4A;
+$white: #ffffff;
+
+/** fuentes */
+$font-title: "Alegreya", sans-serif;
+
+%base-title{
+    font-family: $font-title;
+    color: $dark-green-title;
+}
+
+$font-card:"Open Sans", sans-serif;
+$font-size-card: 14px;
+
+%base-card{
+    color: $color-base-card;
+    font-family: $font-card;
+    font-size: $font-size-card;
+}
+
+

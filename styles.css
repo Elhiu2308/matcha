@@ -1,18 +1,27 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@900&display=swap');
+
+
+
 body {
     background-color:  #fffbf7;
+    font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Alegreya', serif;
 }
 
 h1 {
     color: #025157;
     font-size: 60px;
-    font-family: "Alegreya", serif;
 }
 
 h4 {
     color: #46484c;
     font-size: 20px;
-    font-family: serif;
 } 
 
 p {
@@ -24,6 +33,8 @@ p {
 button {
     color: #fff;
     background-color: #025157;
+    border-radius: 4px;
+    padding: 12px 14px;
 } 
 
 header{
@@ -62,13 +73,18 @@ li {
 }
 
 .navbar {
-    width: 70%;
+    /*width: 70%;*/
     text-align: center;
     font-weight: 500;
+    color: #025157;
+
 }
 
 .actions {
-    width: 15%;
+    /*width: 15%;*/
+    display: flex;
+    gap: 12px;
+    align-items: center;
     text-align: right;
     font-weight: 600;
     color: #67b54b;
@@ -89,41 +105,50 @@ li {
     text-align: center;
 }
 
-.publish h2{
-    color: #025157;
-    font-family: alegreya, serif;
-    font-size: 40px;
-    vertical-align: inherit;
-}
-
-.publish p{
-    color: #343434;
-    font-size: 16px;
-    font-family: sans-serif;
-}
-
-.publish h3{
-    color: #8b8b8bcc;
-    font-size: 16px;
-    font-family: sans-serif;
-    display: flex;
-    flex-direction: column;
-}
-
-.publish input{
-    padding: 14px 12px;
-    border-radius: 5px 5px; 
-}
-
 .container{
     display: flex;
     gap: 12px;
+    margin-bottom: 50px;
 }
 
 .publish{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 12px;
+}
+
+.publish h3{
+    color: #025157;
+    font-size: 40px;
+    line-height: 48px;
+    margin: 0px;
+}
+
+.publish > p{
+    font-size: 16px;
+    color: #242424;
+    line-height: 48px;
+    margin-bottom: 20px;
+}
+
+.publish > form {
+  /*  color: #8b8b8bcc;
+    font-size: 16px;
+    font-family: sans-serif;*/
+    display: flex;
+    flex-direction: column;
+}
+
+.publish > form  p {
+    color: #025157;
+    margin-right: 18px;
+}
+
+
+
+.publish input{
+    padding: 14px 12px;
+    border-radius: 5px 5px; 
 }
 
 .explanatory-video{
@@ -134,49 +159,479 @@ li {
 
 .explanatory-video img{
     height: 80px;
-    margin: 15px;
+    margin-top: 10px;
 }
 
+button:hover {
+    cursor: pointer;
+}
 
-
-    body {
-        background-color:  #fffbf7;
-    }
-
-    h1 {
-        color: #025157;
-    }
-
-    h3 {
-        color: #46484c;
-    } 
-
-    p {
-        color: #8b8b8bcc;
-    }
-    
-    button {
-        color: #fff;
-        padding: 14px 12px;
-        background-color: #025157;
-        border-radius: 0px 5px 5px 0px;
-    }
-    
-    input {
-        padding: 14px 12px;
-        border-radius: 5px 0px 0px 5px;
-    }
-
-
-    .features{
+   
+   /* .features{
         margin-bottom: 200px;
         display: grid;
-        height: 100vh;
-       /* grid-template-columns: repeat(2, 1fr);
+        height: fit-content;
+        grid-template-columns: repeat(2, 1fr);
         grid-template-columns: 100px 200px;
         grid-template-columns: repeat(2, 300px);
         grid-template-columns: repeat(2, 50%);
         grid-template-rows: repeat(2, 1fr);
-        grid-template: repeat(2, 1fr) / repeat(2, 1fr); */  
-        grid-template: repeat(2, 1fr) / repeat(2, 50vh);   
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);   
+        grid-template: repeat(2, 1fr) / repeat(2, 50%);  
+        margin-top: 120px 0;
+        gap: 40px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template: repeat(2, 330px) / repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        background: #025157;
+        padding: 5% 10%;
+             }*/
+
+     /*pseudoclases*/
+
+     /*button:active, button:hover, article, .header{
+        background-color: blue;
+     }*/
+
+     /*.features{
+        height: fit-content;
+        background-color: #025157;
+        m
+     }*/
+
+     .features {
+        background-color: #025157;
+        padding: 60px 120px;
+        display: grid;
+        margin: 120 px 0;
+        gap: 40px;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    }
+
+
+   .feature-card {
+        padding: 36px;
+        background-color: #fff;
+        border: 1px solid #dadada;
+        border-radius: 5px;
+        display: flex;
+        align-items: baseline; 
+        gap: 12px;
+        /*overflow: hidden;*/
+    }
+/*.features .feature-card{     
+        display: flex;
+        background-color: #fff;
+        margin: 15px;
+        border-radius: 10px;
+        border: 1px solid #131313;
+        margin-top: 120px 0;
+        display: grid;
+        gap: 12px;
+        align-items: baseline;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 30px;
+        overflow: hidden;
+        margin-bottom: 30px;
+        margin-left: 15px;
+        margin-right: 15px;
+     }*/
+
+    /* .features .cuadro .contenido{
+        padding: 30px 20px 40px 40px;
+    flex: 2;
+}*/
+/*.features .feature-card .feature-content {
+    padding: 30px 20px 40px 40px;
+    flex: 2;
+}*/
+
+.feature-card .feature-content h3 {
+    font-size: 24px;
+    color: #343434;
+    font-weight: 400;
+}
+
+.feature-card .feature-content p {
+    font-size: 16px;
+    color: #7e7e7e;
+    font-weight: 400;
+}
+
+.feature-card .feature-content a{
+        color: #67b54b;
      }
+
+
+     .feature-card .feature-content img {
+        height: 100%;
+       /* position: relative;
+        right: -50px;
+        height: 80%;*/
+    }
+    /* .cuadro2{
+        background-color: #fff;
+        margin: 15px;
+        border-radius: 5px;
+        margin-top: 120px 0;
+        display: grid;
+        padding: 30px;
+        grid-template-columns: repeat(2, 1fr);
+        overflow: hidden;
+
+
+     }
+
+     .cuadro3{
+        background-color: #fff;
+        margin: 15px;
+        border-radius: 5px;
+        margin-top: 120px 0;
+        display: grid;
+        padding: 30px;
+        grid-template-columns: repeat(2, 1fr);
+        overflow: hidden;
+
+     }
+
+     .cuadro4{
+        background-color: #fff;
+        margin: 15px;
+        border-radius: 5px;
+        margin-top: 120px 0;
+        display: grid;
+        padding: 30px;
+        grid-template-columns: repeat(2, 1fr);
+        overflow: hidden;
+     }*/
+
+     /*.features.cuadro img{
+        height: 100px;
+     }*/
+
+
+     .feature-grid {
+        display: grid;
+        grid-template-columns: 1fr 80px;
+        gap: 12px;
+        background-color: white;
+        padding: 36px;
+        border-radius: 12px;
+    }
+    
+    .feature-grid .feature-content h3 {
+        font-size: 24px;
+        color: #343434;
+        font-weight: 400;
+    }
+    
+    .feature-grid .feature-content img{
+        height: 100px;
+    }
+    
+    .feature-grid .feature-content p {
+        font-size: 16px;
+        color: #7e7e7e;
+        font-weight: 400;
+    }
+    
+    .feature-grid .feature-content a {
+        color: #67b54b;
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    .success-stories {
+        background-color: #a1d683;
+        padding: 5% 15%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    .success-stories .overview {
+        flex: 2;
+        padding-right: 100px;
+
+    }
+    
+
+    
+    .success-stories .overview h2 {
+        font-size: 48px;
+        line-height: 54px;
+        color: #025157;
+    }
+
+    .success-stories .overview p{
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+        color: #343434;
+
+    }
+
+    .success-stories .overview button{
+        font-size: 14px;
+        padding: 12px 12px 6px 12px;
+        border-radius: 8px;
+        height: 45px;
+        font-weight: 600;
+        margin-left: 0;
+
+    }
+    
+    .success-stories .overview img {
+        width: 500px;
+        max-width: 100%;
+    }
+
+    .success-stories .stories-carousel {
+        flex: 1;
+    }
+
+ /* Cambiamos el alto mínimo de la tarjeta, para que se vea bien en responsive */
+.success-stories .card {
+
+        max-width: 370px;
+        width: 100%;
+        min-height: 600px;
+        margin: 0 auto;
+        padding-bottom: 20px;
+    
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+
+    /* Con object-fit, hacemos que la imagen se ajuste a la medida de su contenedor y limitamos su alto */
+.success-stories .card img {
+    max-height: 30vh;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+
+}
+
+    /* Agregamos position: relative para recibir un elemento con position:absolute más adelante */
+    .success-stories .card .card-body{
+        max-width: 370px;
+        width: 100%;
+        position: relative;
+        padding: 40px 1rem 1rem;
+    }
+
+    /* Estos son los estilos para textos y acomodo de elementos */
+    .success-stories .card .card-body h4{
+        color: #025157;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 20px;
+        margin-bottom: 12px;
+        font-family: "Open Sans", sans-serif;
+    }
+
+    .success-stories .card .card-body h3{
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 30px;
+        margin-bottom: 20px;
+        font-family: "Open Sans", sans-serif;
+    }
+    
+
+    .success-stories .card .card-body .card-results{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .success-stories .card .card-body .card-results img{
+        width: 26px;
+    }
+
+    .success-stories .card .card-body .card-results p{
+        margin: 0;
+    }
+
+    .success-stories .card .card-footer button {
+        display: block;
+        margin-left: 0;
+        border-radius: 5px;
+        font-size: 13px;
+        font-weight: 600;
+        padding: 12px 20px;
+        width: 100%;
+        background-color: #025157;
+        color: #fff;
+        border: none;
+    }
+
+    .success-stories .card .card-footer {
+        background-color: #fff;
+        color: #fff;
+        border: none;
+    }
+
+    /* Aqui hacemos un círculo con CSS! Este se posicionará en el margen superior de .card-body */
+    .success-stories .card .card-body .card-circle {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: -45px;
+        right: 20px;
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        padding: 5px;
+    }
+
+    /* Cada círculo tiene su propio color. Verifica qué significa este selector: .card-circle.everly */
+    .success-stories .card .card-body .card-circle.everly {
+        background-color: #f9da73;
+        border: 5px solid #f9da73;
+    }
+
+
+/* Los círculos deben recibir la imagen y ajustarla al tamaño */
+    .success-stories .card .card-body .card-circle.everly img {
+        object-fit: contain;
+        width: 100%;
+    }
+
+    .carousel-indicators{
+        bottom: -45px;
+    }
+
+
+
+
+    /*.success-stories .card img{
+        max-height: 30vh;
+        object-fit: cover;
+    }
+
+
+
+    .card-container {
+        background-color: #fff;
+        border-radius: 6px;
+        padding: 5px;
+    }
+
+    .carousel-item h2{
+         font-size: 25px;
+         font-family: 'Courier New', Courier, monospace;
+         margin: 20px;
+    }
+
+    .carousel-item h3{
+        font-size: 20px;
+        font-family: 'Courier New', Courier, monospace;
+        color: #025157;
+        margin: 20px;
+   }
+
+   .carousel-inner .card-body {
+     display: flex;
+   }
+
+   .card-body img{
+    height: 50px;
+    width: 50px;
+   }
+*/
+
+
+     
+/*punto de quiebre para estableceer nuevos estilos o sebreescribir */
+  @media (max-width: 575px) {
+    .navbar, .actions{
+        display: none;
+    }
+
+    h1{
+        font-size: 30px;
+    }
+    .main{
+        margin-top: 80px;
+    }
+
+    .main img{
+        width: 100%;
+    }
+
+   
+.container{
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.explanatory-video, .publish{
+    width: 90%;
+
+}
+
+.explanatory-video video{
+width: 100%;}
+
+
+.publish h3{
+    font-size: 25px;
+}
+
+.publish p{
+  line-height: 24px;
+}
+
+.publish-actions {
+    display: grid;
+    grid-template-columns: 1fr 120px;
+}
+
+
+  .features {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template: repeat( 4, 1fr) / 1fr;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+
+  .feature-card > img {
+    display: none;
+}
+
+.feature-grid {
+    grid-template-columns: 1fr;
+}
+
+.feature-grid > img {
+    display: none;
+}
+
+}
+
+  @media ((max-width: 576px) and (max-width: 767px)) {
+
+  }
+
+  @media ((max-width: 768px) and (max-width: 991px)) {
+
+    }
+
+    @media ((max-width: 992px) and (max-width: 1199px)) {
+
+    }
+
+    @media (max-width: 1200px) {
+
+    }

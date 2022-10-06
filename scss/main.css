@@ -1,0 +1,84 @@
+/** colores */
+/** fuentes */
+.blog .title {
+  font-family: "Alegreya", sans-serif;
+  color: #025157;
+}
+
+.card-body .metadata, .card-body .autor > h6 {
+  color: #4A4A4A;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+}
+
+.blog {
+  background-color: #ffffff;
+  padding: 5% 10%;
+  max-width: unset;
+}
+.blog .process-list {
+  margin-top: 40px;
+  margin-bottom: 36px;
+}
+.blog .process-list .process {
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.blog .process-list .process > div > h3 {
+  color: #025157;
+  margin-bottom: 0;
+  font-size: 30px;
+  font-weight: 500;
+  font-family: "Open Sans", sans-serif;
+}
+.blog .process-list .process > div > p {
+  color: #135359;
+  margin: 0;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+}
+.blog .process-list .process .process-icon {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+  text-align: center;
+}
+.blog .process-list .process img {
+  height: 100%;
+}
+.blog button {
+  height: auto;
+  border-radius: 8px;
+  padding: 12px;
+  width: 180px;
+  margin-bottom: 15px;
+}
+
+.card-body h5 {
+  font-size: 24px;
+  font-family: "Open Sans", sans-serif;
+  color: #4A4A4A;
+}
+.card-body .metadata .category {
+  color: #67b54b;
+}
+.card-body .metadata .red-times {
+  color: #979797;
+}
+.card-body .card-text {
+  color: #4A4A4A;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+}
+.card-body .autor {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.card-body .autor img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}/*# sourceMappingURL=main.css.map */
